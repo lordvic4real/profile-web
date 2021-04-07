@@ -1,6 +1,7 @@
 // import Head from "next/head";
 import Banner from "../components/portfolio/banner";
 import Meta from "../components/shared/MetaSEO";
+import AllPortfolios from "../components/portfolio/portfolio";
 
 export default function Portfolio() {
   return (
@@ -13,6 +14,7 @@ export default function Portfolio() {
         image=""
       />
       <Banner />
+      <AllPortfolios />
     </>
   );
 }

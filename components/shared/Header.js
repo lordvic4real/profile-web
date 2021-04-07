@@ -225,10 +225,7 @@ const MobileSubMenu = styled.div`
       display: flex;
     }
   }
-  /* .mobile-menu-dropdown-item.alt-bg {
-    background: ${(props) =>
-    props.theme.vCareMenuLight};
-  } */
+  
   .mobile-menu-dropdown-item.bottom-menu {
     height: 95px;
     justify-content: center;

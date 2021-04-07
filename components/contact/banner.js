@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { HomeOutlined, SendOutlined, MobileOutlined } from "@ant-design/icons";
 
 const BannerWrapper = styled.div`
   font-family: muli;
@@ -26,12 +27,19 @@ const BannerWrapper = styled.div`
   }
   .contact {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 30px 40px 30px 75px;
+    grid-gap: 20px;
     @media (max-width: 788px) {
       padding: 20px 10px 10px 10px;
       grid-template-columns: 2fr;
     }
+  }
+  .form-area {
+    padding: 20px;
+  }
+  .adres {
+    padding: 20px;
   }
   .form_area_title {
     font-size: 22px;
@@ -40,6 +48,7 @@ const BannerWrapper = styled.div`
     margin-bottom: 0;
     text-transform: capitalize;
     font-family: muli;
+    padding: 30px 40px 30px 95px;
   }
   .grid-form {
     display: flex;
@@ -54,19 +63,49 @@ const BannerWrapper = styled.div`
   .form-control {
     /* display: block; */
     width: 100%;
-    height: calc(2.25rem + 2px);
-    padding: 2.275rem 2.55rem;
-    font-size: 1.2rem;
-    line-height: 3.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
+    height: 50px;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in, box-shadow 0.15s ease-in-out;
     @media (max-width: 788px) {
       max-width: 280px;
     }
+  }
+  .message {
+    height: 120px;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in, box-shadow 0.15s ease-in-out;
+  }
+  .btn {
+    width: 208.5px;
+    height: 45px;
+    background: #615cfd;
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: "Muli", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    text-align: center;
+    color: #fff !important;
+    text-transform: capitalize;
+    transition: 0.5s;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      height: 51px;
+      width: 278.5px;
+      padding: 10px 30px;
+      font-size: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  .btn:hover {
+    border: 1px solid #615cfd;
+    color: #615cfd !important;
+    background: transparent;
   }
   .form-group {
     margin-bottom: 2rem;
@@ -82,6 +121,23 @@ const BannerWrapper = styled.div`
       grid-template-columns: 2fr;
     }
   }
+  .contact a {
+    color: #000;
+  }
+  .anticon {
+    font-size: 45px;
+  }
+  .icon-wrap {
+    padding-right: 10px;
+  }
+  .wrapper {
+    margin-bottom: 15px;
+  }
+  @media (max-width: 767px) {
+    .sm {
+      padding-left: 52px;
+    }
+  }
 `;
 
 const Banner = (props) => (
@@ -90,15 +146,15 @@ const Banner = (props) => (
       <div className="banner_area">
         <h1>contact me</h1>
       </div>
+      <h1 className="form_area_title">get in touch</h1>
       <div className="contact">
-        <div>
-          <h1 className="form_area_title">get in touch</h1>
+        <div className="form-area">
           <form>
             <div className="grid-form">
               <div className="col form-group">
                 <textarea
-                  placeholder="Enter massege"
-                  className="form-control"
+                  placeholder="Enter Message"
+                  className="message"
                 ></textarea>
               </div>
             </div>
@@ -117,10 +173,43 @@ const Banner = (props) => (
                   className="form-control"
                 />
               </div>
+              <div className="col form-group">
+                <span className="btn">send message</span>
+              </div>
             </div>
           </form>
         </div>
-        <div>2</div>
+        <div className="adres">
+          <div className="wrapper">
+            <span className="icon-wrap">
+              <HomeOutlined />
+            </span>
+            <span>
+              Brytahub ICT Training center{" "}
+              <span className="sm">Gwagwalada Abuja</span>
+            </span>
+          </div>
+          <div className="wrapper">
+            <span className="icon-wrap">
+              <SendOutlined />
+            </span>
+            <span>
+              <a href="mailto:victorugbededavid@gmail.com" target="_blank">
+                victorugbededavid@gmail.com <br />
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Send us your
+                query anytime!
+              </a>
+            </span>
+          </div>
+          <div className="wrapper">
+            <span className="icon-wrap">
+              <MobileOutlined />
+            </span>
+            <span>
+              <a href="tel:2347060936070">07060936070</a>
+            </span>
+          </div>
+        </div>
       </div>
     </BannerWrapper>
   </>

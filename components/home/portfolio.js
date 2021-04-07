@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 import {
   FacebookFilled,
   TwitterCircleFilled,
@@ -8,8 +9,9 @@ import {
   HeartOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
+import { portfolios } from "../data/portfolio";
 
-const PortfolioContainer = styled.div`
+export const PortfolioContainer = styled.div`
   min-height: 500px;
   font-family: muli;
 
@@ -36,7 +38,7 @@ const PortfolioContainer = styled.div`
     overflow: hidden;
     cursor: default;
   }
-  .view .mask {
+   .mask {
     position: absolute;
     top: 0;
     left: 0;
@@ -111,41 +113,48 @@ const PortfolioContainer = styled.div`
     border: 1px solid #615cfd;
   }
 `;
-const Portfolio = (props) => (
-  <>
-    <PortfolioContainer>
-      <div className="title-container">
-        <h1>Some of my awesome stuffs here</h1>
-      </div>
-      <div className="port-container">
-        <div className="view overlay ">
-          <img src="/images/port1.png" />
-          <div className="mask ">
-            <span className="title">
-              <GithubOutlined style={{ fontSize: 50, fontWeight: 800 }} />
-            </span>
-            <span className="title">
-              <TwitterCircleFilled style={{ fontSize: 50, fontWeight: 800 }} />
-            </span>
-          </div>
+const Portfolio = (props) => {
+  const [folios, setFolios] = useState([]);
+
+  useEffect(() => {
+    const effectPortfolios = portfolios.filter(
+      (portfolio) => portfolio.showOnDesktop === true
+    );
+    setFolios(effectPortfolios);
+  }, [portfolios]);
+  return (
+    <>
+      <PortfolioContainer>
+        <div className="title-container">
+          <h1>Some of my awesome stuffs here</h1>
         </div>
-        <div className="view overlay ">
-          <img src="/images/port2.png" />
-          <div className="mask ">
-            <span className="title">
-              <GithubOutlined style={{ fontSize: 50 }} />
-            </span>
-            <span className="title">
-              <HeartOutlined style={{ fontSize: 50 }} />
-            </span>
-          </div>
+        <div className="port-container">
+          {folios.map((folio) => (
+            <div className="view overlay " key={folio.id}>
+              <img src={folio.image} />
+              <div className="mask ">
+                <span className="title">
+                  <GithubOutlined style={{ fontSize: 50, fontWeight: 800 }} />
+                </span>
+                <span className="title">
+                  <TwitterCircleFilled
+                    style={{ fontSize: 50, fontWeight: 800 }}
+                  />
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-      <div className="btn-container">
-        <span className="line_btn">more works</span>
-      </div>
-    </PortfolioContainer>
-  </>
-);
+        <div className="btn-container">
+          <span className="line_btn">more works</span>
+        </div>
+      </PortfolioContainer>
+    </>
+  );
+};
 
 export default Portfolio;
+
+
+
+
