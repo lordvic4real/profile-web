@@ -215,12 +215,24 @@ const Footer = (props) => {
                 <FacebookFilled />
               </span>
             </a>
-            <span className="socail_links">
-              <TwitterCircleFilled />
-            </span>
-            <span className="socail_links">
-              <LinkedinFilled />
-            </span>
+            <a
+              href="http://www.twitter.com/lordvic001"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span className="socail_links">
+                <TwitterCircleFilled />
+              </span>
+            </a>
+            <a
+              href="http://www.linkedin.com/in/victor-david-097428152"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span className="socail_links">
+                <LinkedinFilled />
+              </span>
+            </a>
           </div>
         </div>
         <div className="copyright">
