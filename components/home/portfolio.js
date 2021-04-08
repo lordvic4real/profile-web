@@ -38,7 +38,7 @@ export const PortfolioContainer = styled.div`
     overflow: hidden;
     cursor: default;
   }
-   .mask {
+  .mask {
     position: absolute;
     top: 0;
     left: 0;
@@ -145,8 +145,13 @@ const Portfolio = (props) => {
             </div>
           ))}
         </div>
+
         <div className="btn-container">
-          <span className="line_btn">more works</span>
+          <Link href="/portfolio">
+            <a>
+              <span className="line_btn">more works</span>
+            </a>
+          </Link>
         </div>
       </PortfolioContainer>
     </>
@@ -154,7 +159,3 @@ const Portfolio = (props) => {
 };
 
 export default Portfolio;
-
-
-
-

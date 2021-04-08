@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {
   FacebookFilled,
   TwitterCircleFilled,
-  InstagramFilled,
+  GithubFilled,
   LinkedinFilled,
   HeartOutlined,
 } from "@ant-design/icons";
@@ -176,7 +176,11 @@ const Footer = (props) => {
             </span>
           </div>
           <div>
-            <span className="btn">Lets Connect</span>
+            <Link href="/contact">
+              <a>
+                <span className="btn"> Lets Connect</span>
+              </a>
+            </Link>
           </div>
           <p className="hide-desktop"> </p>
         </div>
@@ -185,20 +189,32 @@ const Footer = (props) => {
             <Link href="/" passHref>
               <a className="footer-link">Home</a>
             </Link>
-            <Link href="/" passHref>
-              <a className="footer-link">Services</a>
-            </Link>
-            <Link href="/" passHref>
+            <Link href="/portfolio" passHref>
               <a className="footer-link">Portfolio</a>
+            </Link>
+            <Link href="/contact" passHref>
+              <a className="footer-link">Contact</a>
             </Link>
           </nav>
           <div className="icon-container">
-            <span className="socail_links">
-              <InstagramFilled />
-            </span>
-            <span className="socail_links">
-              <FacebookFilled />
-            </span>
+            <a
+              href="http://www.github.com/lordvic4real"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span className="socail_links">
+                <GithubFilled />
+              </span>
+            </a>
+            <a
+              href="http://www.facebook.com/victor.david3"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span className="socail_links">
+                <FacebookFilled />
+              </span>
+            </a>
             <span className="socail_links">
               <TwitterCircleFilled />
             </span>
