@@ -1,14 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-import {
-  FacebookFilled,
-  TwitterCircleFilled,
-  InstagramFilled,
-  LinkedinFilled,
-  HeartOutlined,
-  GithubOutlined,
-} from "@ant-design/icons";
+import { GlobalOutlined, GithubOutlined } from "@ant-design/icons";
 import { portfolios } from "../data/portfolio";
 
 export const PortfolioContainer = styled.div`
@@ -32,6 +25,7 @@ export const PortfolioContainer = styled.div`
   .port-container img {
     height: 100%;
     width: 100%;
+    /* object-fit: contain; */
   }
   .view {
     position: relative;
@@ -52,17 +46,16 @@ export const PortfolioContainer = styled.div`
 
   .overlay .mask {
     opacity: 0;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in;
   }
 
   .overlay .mask:hover {
     opacity: 0.8;
-    background: linear-gradient(rgb(133, 243, 44), rgb(44, 243, 133));
+    background: linear-gradient(rgb(133, 43, 244), rgb(44, 243, 233));
     text-align: center;
     display: flex;
     align-items: center;
     transition: 0.5s;
-    /* opacity: 0; */
     overflow: hidden;
     justify-content: center;
   }
@@ -133,14 +126,24 @@ const Portfolio = (props) => {
             <div className="view overlay " key={folio.id}>
               <img src={folio.image} />
               <div className="mask ">
-                <span className="title">
-                  <GithubOutlined style={{ fontSize: 50, fontWeight: 800 }} />
-                </span>
-                <span className="title">
-                  <TwitterCircleFilled
-                    style={{ fontSize: 50, fontWeight: 800 }}
-                  />
-                </span>
+                <a
+                  href="https://github.com/lordvic4real/wedding-app"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <span className="title">
+                    <GithubOutlined style={{ fontSize: 50, fontWeight: 800 }} />
+                  </span>
+                </a>
+                <a
+                  href="https://brytaweddings.netlify.app"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <span className="title">
+                    <GlobalOutlined style={{ fontSize: 50, fontWeight: 800 }} />
+                  </span>
+                </a>
               </div>
             </div>
           ))}

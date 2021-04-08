@@ -167,9 +167,10 @@ const About = (props) => (
           <h1 className="move-me-1">About me</h1>
           <div>
             <p className="move-me-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida Risus com odo viverra maecenas.
+              Am a programmer per excellence. a graduate of the University of
+              Abuja, Abuja Nigeria, studied Biology Education. i like to
+              contribute to knowledge, building owesome projects and reaching
+              out to the the world.
             </p>
             <a href="#">
               <span className="btn">Download CV</span>

@@ -1,11 +1,12 @@
 export const portfolios = [
   {
-    image: "/images/port2.png",
+    image: "/images/capture.PNG",
     id: 1,
     showOnDesktop: true,
+    link: "https://github.com/lordvic4real/wedding-app",
   },
   {
-    image: "/images/port2.png",
+    image: "/images/book.PNG",
     id: 2,
     showOnDesktop: true,
   },

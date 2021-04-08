@@ -225,7 +225,7 @@ const MobileSubMenu = styled.div`
       display: flex;
     }
   }
-  
+
   .mobile-menu-dropdown-item.bottom-menu {
     height: 95px;
     justify-content: center;
@@ -300,22 +300,40 @@ const Header = ({ menuOpen, toggleMenu }) => {
                     <a>Portfolio</a>
                   </Link>
                 </span>
-                <span className="btn">
+                <span className="">
                   <Link href="/contact">
                     <a>Contact</a>
                   </Link>
                 </span>
               </nav>
               <div className="icon">
-                <span className="icon-bg">
-                  <FacebookFilled style={{ color: "#fff " }} />
-                </span>
-                <span className="icon-bg">
-                  <TwitterCircleFilled style={{ color: "#fff" }} />
-                </span>
-                <span className="icon-bg">
-                  <GithubOutlined style={{ color: "#fff" }} />
-                </span>
+                <a
+                  href="http://www.facebook.com/victor.david1"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <span className="icon-bg">
+                    <FacebookFilled style={{ color: "#fff " }} />
+                  </span>
+                </a>
+                <a
+                  href="http://www.twitter.com/lordvic001"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <span className="icon-bg">
+                    <TwitterCircleFilled style={{ color: "#fff" }} />
+                  </span>
+                </a>
+                <a
+                  href="http://www.github.com/lordvic4real"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <span className="icon-bg">
+                    <GithubOutlined style={{ color: "#fff" }} />
+                  </span>
+                </a>
               </div>
             </div>
 

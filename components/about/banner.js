@@ -25,6 +25,14 @@ const BannerWrapper = styled.div`
     text-transform: capitalize;
     font-family: muli;
   }
+  .intro {
+    font-size: 25px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 0;
+    font-family: muli;
+    text-align: center;
+  }
 `;
 
 const Banner = (props) => (
@@ -34,7 +42,11 @@ const Banner = (props) => (
         <h1>about me</h1>
       </div>
       <div className="video">
-        <h1> video section</h1>
+        <p className="intro">
+          Hi there, I am Victor David. I am a skillful Web Developer,
+          <br /> a Teacher, Jesus lover and a family oriented, i will like to
+          <br /> share with you some of my ideas.
+        </p>
       </div>
       <div>
         <About />

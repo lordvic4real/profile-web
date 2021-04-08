@@ -69,6 +69,9 @@ const ServiceContainer = styled.div`
       margin-bottom: 20px;
     }
   }
+  .desc {
+    text-transform: capitalize;
+  }
 `;
 
 const Service = (props) => (
@@ -78,26 +81,28 @@ const Service = (props) => (
       <div className="services">
         <div className="card-content">
           <img src="/images/1.svg" alt="services" />
-          <h3 className="card-tittle">Graphic design</h3>
-          <span>
-            Lorem ipsum dolor sit amet, consectetur
-            <br /> adipiscing elit sed do eiusmod tempor.
+          <h3 className="card-tittle">Mobile App Dev</h3>
+          <span className="desc">
+            you can trust us for your mobile app project
+            <br /> we build with cutting edge technology .
           </span>
         </div>
         <div className="card-content">
           <img src="/images/2.svg" alt="services" />
           <h3 className="card-tittle">Web Development</h3>
-          <span>
-            Lorem ipsum dolor sit amet, consectetur
-            <br /> adipiscing elit sed do eiusmod tempor.
+          <span className="desc">
+            let me be your client for all your web applications
+            <br />
+            projects we will give you the best .
           </span>
         </div>
         <div className="card-content">
           <img src="/images/3.svg" alt="services" />
           <h3 className="card-tittle">Training</h3>
-          <span>
-            Lorem ipsum dolor sit amet, consectetur
-            <br /> adipiscing elit sed do eiusmod tempor.
+          <span className="desc">
+            we deliver cooperate and personal trainings from <br />
+            basic computer knowledge, graphics design and web/software
+            development.
           </span>
         </div>
       </div>
