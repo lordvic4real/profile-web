@@ -127,7 +127,7 @@ const AboutContainer = styled.div`
   .grow:hover {
     transform: scale(1.02);
   }
-  .move-me {
+  /* .move-me {
     display: inline-block;
     padding: 20px;
     color: white;
@@ -136,15 +136,15 @@ const AboutContainer = styled.div`
   }
   .move-me-1 {
     animation: move-in-steps 8s steps(4) infinite;
-  }
-  .move-me-2 {
+  } */
+  /* .move-me-2 {
     animation: move-in-steps 8s steps(4, start) infinite;
   }
   .move-me-3 {
     animation: move-in-steps 8s infinite;
-  }
+  } */
 
-  @keyframes move-in-steps {
+  /* @keyframes move-in-steps {
     0% {
       left: 0;
       color: teal;
@@ -155,7 +155,7 @@ const AboutContainer = styled.div`
       border-radius: 5px;
       padding: 5px;
     }
-  }
+  } */
 `;
 
 const About = (props) => (
@@ -164,9 +164,9 @@ const About = (props) => (
       <div className="about">
         <div className="title">About</div>
         <div className="about-desc">
-          <h1 className="move-me-1">About me</h1>
+          <h1 className="">About me</h1>
           <div>
-            <p className="move-me-2">
+            <p className="">
               Am a programmer per excellence. a graduate of the University of
               Abuja, Abuja Nigeria, studied Biology Education. i like to
               contribute to knowledge, building owesome projects and reaching

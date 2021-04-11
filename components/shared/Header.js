@@ -4,42 +4,10 @@ import { useState, useEffect } from "react";
 import {
   MenuOutlined,
   CloseOutlined,
-  FacebookFilled,
+  LinkedinOutlined,
   TwitterCircleFilled,
   GithubOutlined,
 } from "@ant-design/icons";
-
-const menu = () => (
-  <StyledSubMenu>
-    <div class="sub-menu">
-      <div class="menu">
-        <Link href="/" passHref>
-          <a>Home</a>
-        </Link>
-      </div>
-      <div class="menu">
-        <Link href="/about" passHref>
-          <a>About</a>
-        </Link>
-      </div>
-      <div class="menu">
-        <Link href="/portfolio" passHref>
-          <a>Portfolio</a>
-        </Link>
-      </div>
-      <div class="menu">
-        <Link href="/contact" passHref>
-          <a>Contact </a>
-        </Link>
-      </div>
-    </div>
-  </StyledSubMenu>
-);
-
-const Container = styled.div`
-  margin-left: 5%;
-  margin-right: 5%;
-`;
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -63,6 +31,8 @@ const StyledHeader = styled.header`
   }
   .navbar a {
     color: #fff;
+    font-size: 17px;
+    font-family: muli;
   }
   .navbar .icon-bg {
     /* background: black; */
@@ -102,8 +72,8 @@ const StyledHeader = styled.header`
   }
 
   .logo a {
-    padding-left: 15%;
-    font-size: 28px;
+    padding-left: 12%;
+    font-size: 25px;
     font-family: muli;
     font-weight: bold;
     color: #fff;
@@ -120,7 +90,7 @@ const StyledHeader = styled.header`
     align-items: center;
     min-height: 70px;
     grid-gap: 20px;
-    padding: 10px;
+    /* padding: 10px; */
   }
   .header-bg nav {
     padding-left: 20px;
@@ -152,35 +122,6 @@ const StyledHeader = styled.header`
     background: #615cfd;
     border: 1px solid #615cfd;
   }
-  .btn {
-    width: 103.5px;
-    height: 45px;
-    background: #615cfd;
-    display: inline-block;
-    padding: 5px 10px;
-    font-family: "Muli", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    border: 1px solid transparent;
-    border-radius: 0px;
-    text-align: center;
-    color: #fff !important;
-    text-transform: capitalize;
-    transition: 0.5s;
-    cursor: pointer;
-    @media (max-width: 767px) {
-      height: 51px;
-      width: 158.5px;
-      padding: 10px 30px;
-      font-size: 100%;
-      margin-bottom: 30px;
-    }
-  }
-  .btn:hover {
-    border: 1px solid #615cfd;
-    color: #615cfd !important;
-    background: transparent;
-  }
 `;
 const MobileSubMenu = styled.div`
   background: #000000;
@@ -197,7 +138,7 @@ const MobileSubMenu = styled.div`
   z-index: 999;
   border-radius: 0px 0px 0px 25px;
   @media (max-width: 768px) {
-    width: 262px;
+    width: 300px;
     height: 250px;
     opacity: 0.7;
   }
@@ -209,7 +150,7 @@ const MobileSubMenu = styled.div`
     align-items: center;
     padding-left: 25px;
     color: #fff;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in;
     @media (max-width: 768px) {
       height: 50px;
       padding-left: 16px;
@@ -217,33 +158,11 @@ const MobileSubMenu = styled.div`
   }
   .mobile-menu-dropdown-item a {
     color: #fff;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in;
   }
   .mobile-menu-dropdown-item.mobile-only {
     display: none;
     @media (max-width: 768px) {
-      display: flex;
-    }
-  }
-
-  .mobile-menu-dropdown-item.bottom-menu {
-    height: 95px;
-    justify-content: center;
-    padding-right: 25px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 100px;
-    transition: all 0.4s ease-in-out;
-    .bottom-menu:nth-child(odd) {
-      justify-self: end;
-    }
-    .mobile-menu-dropdown-item.bottom-menu:nth-child(even) {
-      justify-self: start;
-    }
-
-    @media (max-width: 768px) {
-      justify-content: space-between;
-      padding-right: 16px;
       display: flex;
     }
   }
@@ -266,12 +185,6 @@ const Header = ({ menuOpen, toggleMenu }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   });
-
-  // const [path, setPath] = useState("/");
-  // const location = useLocation();
-  // useEffect(() => {
-  //   setPath(location.pathname);
-  // }, [location]);
 
   return (
     <>
@@ -308,12 +221,12 @@ const Header = ({ menuOpen, toggleMenu }) => {
               </nav>
               <div className="icon">
                 <a
-                  href="http://www.facebook.com/victor.david1"
+                  href="http://www.linkedin.com/in/victor-david-097428152"
                   rel="noreferrer noopener"
                   target="_blank"
                 >
                   <span className="icon-bg">
-                    <FacebookFilled style={{ color: "#fff " }} />
+                    <LinkedinOutlined />
                   </span>
                 </a>
                 <a

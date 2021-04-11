@@ -5,7 +5,7 @@ import Router from "next/router";
 import NProgress from "nprogress";
 import Page from "../components/shared/Page";
 import "@brainhubeu/react-carousel/lib/style.css";
-// import "antd/dist/antd.min.css";
+import "antd/dist/antd.min.css";
 // import "@brainhubeu/react-carousel/lib/style.css";
 
 Router.events.on("routeChangeStart", () => NProgress.start());

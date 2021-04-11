@@ -10,6 +10,7 @@ const SkillContainer = styled.div`
     font-size: 40px;
     text-align: center;
     padding: 20px;
+    text-transform: capitalize;
   }
   .img-wrapper {
     display: grid;
@@ -45,35 +46,6 @@ const SkillContainer = styled.div`
   }
   .grow:hover {
     transform: scale(1.02);
-  }
-  .move-me {
-    display: inline-block;
-    padding: 20px;
-    color: white;
-    position: relative;
-    margin: 0 0 10px 0;
-  }
-  .move-me-1 {
-    animation: move-in-steps 8s steps(4) infinite;
-  }
-  .move-me-2 {
-    animation: move-in-steps 8s steps(4, start) infinite;
-  }
-  .move-me-3 {
-    animation: move-in-steps 8s infinite;
-  }
-
-  @keyframes move-in-steps {
-    0% {
-      left: 0;
-      color: teal;
-    }
-    100% {
-      left: 100%;
-      color: red;
-      border-radius: 5px;
-      padding: 5px;
-    }
   }
 `;
 

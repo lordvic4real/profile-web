@@ -25,7 +25,7 @@ export const PortfolioContainer = styled.div`
   .port-container img {
     height: 100%;
     width: 100%;
-    /* object-fit: contain; */
+    object-fit: cover;
   }
   .view {
     position: relative;
@@ -68,6 +68,7 @@ export const PortfolioContainer = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    color: #f2f3f4;
   }
 
   .title-container {
@@ -119,7 +120,7 @@ const Portfolio = (props) => {
     <>
       <PortfolioContainer>
         <div className="title-container">
-          <h1>Some of my awesome stuffs here</h1>
+          <h1>Some of my awesome stuff</h1>
         </div>
         <div className="port-container">
           {folios.map((folio) => (

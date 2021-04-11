@@ -62,6 +62,7 @@ const ServiceContainer = styled.div`
     text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
+    text-transform: capitalize;
     @media (max-width: 768px) {
       font-size: 30px;
       font-family: muli;

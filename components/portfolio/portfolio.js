@@ -3,27 +3,26 @@ import styled from "styled-components";
 import { PortfolioContainer } from "../home/portfolio";
 import { useState, useEffect } from "react";
 import { portfolios } from "../data/portfolio";
-import {
-  TwitterCircleFilled,
-  LinkedinFilled,
-  HeartOutlined,
-  GithubOutlined,
-} from "@ant-design/icons";
+import { TwitterCircleFilled, GithubOutlined } from "@ant-design/icons";
+import { Tabs } from "antd";
+
+const { TabPane } = Tabs;
 
 const AllPortfolios = (props) => {
-  const [folios, setFolios] = useState([]);
+  const [portfolio, setPortfolio] = useState([]);
 
   useEffect(() => {
     const effectPortfolios = portfolios.map(
       (portfolio) => portfolio.showOnDesktop
     );
-    setFolios(effectPortfolios);
+    setPortfolio(effectPortfolios);
   }, [portfolios]);
+
   return (
     <>
       <PortfolioContainer>
         <div className="port-container">
-          {folios.map((folio) => (
+          {portfolio.map((folio) => (
             <div className="view overlay " key={folio.id}>
               <img src={folio.image} />
               <div className="mask ">
@@ -40,8 +39,23 @@ const AllPortfolios = (props) => {
           ))}
         </div>
         <div className="btn-container">
-          <span className="line_btn">lets discuss for a project</span>
+          <Link href="/contact">
+            <a>
+              <span className="line_btn">lets discuss for a project</span>
+            </a>
+          </Link>
         </div>
+        <Tabs defaultActiveKey="1" centered>
+          <TabPane tab="All projects" key="1">
+            <img src="/images/capture.PNG" />
+          </TabPane>
+          <TabPane tab="Client Projects" key="2">
+            Content of Tab Pane 2
+          </TabPane>
+          <TabPane tab="Side projects" key="3">
+            Content of Tab Pane 3
+          </TabPane>
+        </Tabs>
       </PortfolioContainer>
     </>
   );

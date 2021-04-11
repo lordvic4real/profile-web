@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styled from "styled-components";
-import Typical from "./typical";
 
 const HomeBanner = styled.div`
   min-height: 400px;
@@ -41,6 +40,7 @@ const HomeBanner = styled.div`
     margin-bottom: 30px;
     text-transform: capitalize;
     font-family: muli;
+    letter-spacing: 1.8px;
     color: #f2f2f2;
     @media (max-width: 768px) {
       font-size: 40px;
@@ -98,13 +98,10 @@ const HomeBanner = styled.div`
     }
   }
   .intro {
-    visibility: visible;
-    animation-duration: 1s;
-    animation-delay: 2.1s;
-    animation-name: fadeInUp;
-    max-width: 390px;
+    max-width: 400px;
     font-size: 30px;
     font-weight: 400;
+    letter-spacing: 1.8px;
     line-height: 42px;
     margin-bottom: 50px;
     color: #f2f2f2;
@@ -137,7 +134,11 @@ const Banner = (props) => (
           </h1>
           <span className="intro">front-end engineer, and instructor</span>
           <div>
-            <span className="btn">lets connect</span>
+            <Link href="/contact">
+              <a>
+                <span className="btn">lets connect</span>
+              </a>
+            </Link>
           </div>
         </div>
         <div className="section-img">

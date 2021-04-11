@@ -170,9 +170,7 @@ const Footer = (props) => {
           </div>
           <div className="discuss-desc">
             <span className="desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-              eiusmod tempor incididunt
-              <br /> ut labore et dolore magna aliqua.
+              One project with us is enough to convince you
             </span>
           </div>
           <div>
@@ -206,15 +204,7 @@ const Footer = (props) => {
                 <GithubFilled />
               </span>
             </a>
-            <a
-              href="http://www.facebook.com/victor.david3"
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              <span className="socail_links">
-                <FacebookFilled />
-              </span>
-            </a>
+
             <a
               href="http://www.twitter.com/lordvic001"
               rel="noreferrer noopener"

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { HomeOutlined, SendOutlined, MobileOutlined } from "@ant-design/icons";
+import { HomeOutlined, MailOutlined, MobileOutlined } from "@ant-design/icons";
 
 const BannerWrapper = styled.div`
   font-family: muli;
@@ -138,6 +138,10 @@ const BannerWrapper = styled.div`
       padding-left: 52px;
     }
   }
+  input,
+  textarea ::placeholder {
+    padding-left: 10px;
+  }
 `;
 
 const Banner = (props) => (
@@ -191,13 +195,11 @@ const Banner = (props) => (
           </div>
           <div className="wrapper">
             <span className="icon-wrap">
-              <SendOutlined />
+              <MailOutlined />
             </span>
             <span>
               <a href="mailto:victorugbededavid@gmail.com" target="_blank">
-                victorugbededavid@gmail.com <br />
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Send us your
-                query anytime!
+                victorugbededavid@gmail.com
               </a>
             </span>
           </div>

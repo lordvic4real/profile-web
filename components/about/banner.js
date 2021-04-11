@@ -32,6 +32,7 @@ const BannerWrapper = styled.div`
     margin-bottom: 0;
     font-family: muli;
     text-align: center;
+    line-height: 38px;
   }
 `;
 
