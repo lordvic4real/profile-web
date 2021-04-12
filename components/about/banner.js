@@ -4,6 +4,7 @@ import About from "../../components/home/about";
 
 const BannerWrapper = styled.div`
   font-family: muli;
+  padding-bottom: 30px;
 
   .banner_area {
     z-index: 0;
@@ -26,6 +27,7 @@ const BannerWrapper = styled.div`
     font-family: muli;
   }
   .intro {
+    padding: 30px;
     font-size: 25px;
     color: #000;
     font-weight: 700;
@@ -36,7 +38,7 @@ const BannerWrapper = styled.div`
   }
 `;
 
-const Banner = (props) => (
+const Banner = () => (
   <>
     <BannerWrapper>
       <div className="banner_area">
@@ -44,8 +46,8 @@ const Banner = (props) => (
       </div>
       <div className="video">
         <p className="intro">
-          Hi there, I am Victor David. I am a skillful Web Developer,
-          <br /> a Teacher, Jesus lover and a family oriented, i will like to
+          I am Victor David. a skillful Web Developer, a Teacher,
+          <br /> Jesus boy, a family and goal oriented, i will like to
           <br /> share with you some of my ideas.
         </p>
       </div>
