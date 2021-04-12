@@ -3,7 +3,8 @@ export const portfolios = [
     image: "/images/capture.PNG",
     id: 1,
     showOnDesktop: true,
-    link: "https://github.com/lordvic4real/wedding-app",
+    githubLink: "https://github.com/lordvic4real/wedding-app",
+    netlifyLink: "https://github.com/lordvic4real/wedding-app",
   },
   {
     image: "/images/book.PNG",

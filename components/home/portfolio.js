@@ -127,24 +127,33 @@ const Portfolio = (props) => {
             <div className="view overlay " key={folio.id}>
               <img src={folio.image} />
               <div className="mask ">
-                <a
-                  href="https://github.com/lordvic4real/wedding-app"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <span className="title">
-                    <GithubOutlined style={{ fontSize: 50, fontWeight: 800 }} />
-                  </span>
-                </a>
-                <a
-                  href="https://brytaweddings.netlify.app"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <span className="title">
-                    <GlobalOutlined style={{ fontSize: 50, fontWeight: 800 }} />
-                  </span>
-                </a>
+                {folio.githubLink && (
+                  <a
+                    href={folio.githubLink}
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    <span className="title">
+                      <GithubOutlined
+                        style={{ fontSize: 50, fontWeight: 800 }}
+                      />
+                    </span>
+                  </a>
+                )}
+
+                {folio.netlifyLink && (
+                  <a
+                    href={folio.netlifyLink}
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    <span className="title">
+                      <GlobalOutlined
+                        style={{ fontSize: 50, fontWeight: 800 }}
+                      />
+                    </span>
+                  </a>
+                )}
               </div>
             </div>
           ))}
