@@ -62,13 +62,13 @@ const Container = styled.div`
   .discuss-title {
     color: #fff;
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2em;
     padding: 150px 0 0px 0;
     margin: 0px 0px 8px;
     @media (max-width: 767px) {
-      font-size: 35px;
-      padding: 80px 0 0px 0;
+      font-size: 180%;
+      padding: 50px 0 0px 0;
     }
   }
   .discuss-desc {
@@ -154,12 +154,12 @@ const Container = styled.div`
     line-height: 28px;
     margin-bottom: 30px;
     @media (max-width: 767px) {
-      font-size: 100%;
+      font-size: 130%;
     }
   }
 `;
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <StyledFooter>
       {" "}
@@ -169,9 +169,7 @@ const Footer = (props) => {
             <h2 className="discuss-title">Let’s discuss for a project</h2>
           </div>
           <div className="discuss-desc">
-            <span className="desc">
-              One project with us is enough to convince you
-            </span>
+            <span className="desc">hire me am open for jobs</span>
           </div>
           <div>
             <Link href="/contact">

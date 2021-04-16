@@ -4,6 +4,8 @@ import { HomeOutlined, MailOutlined, MobileOutlined } from "@ant-design/icons";
 
 const BannerWrapper = styled.div`
   font-family: muli;
+  color: black;
+  font-size: 17px;
 
   .banner_area {
     z-index: 0;
@@ -144,7 +146,7 @@ const BannerWrapper = styled.div`
   }
 `;
 
-const Banner = (props) => (
+const Banner = () => (
   <>
     <BannerWrapper>
       <div className="banner_area">

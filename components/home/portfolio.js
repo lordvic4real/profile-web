@@ -5,13 +5,13 @@ import { GlobalOutlined, GithubOutlined } from "@ant-design/icons";
 import { portfolios } from "../data/portfolio";
 
 export const PortfolioContainer = styled.div`
-  min-height: 500px;
+  /* min-height: 500px; */
   font-family: muli;
 
   .port-container {
     min-height: 400px;
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(3, 2fr);
     justify-content: center;
     padding: 0px 5% 10px 5%;
     grid-gap: 30px;
@@ -20,7 +20,7 @@ export const PortfolioContainer = styled.div`
     }
   }
   .port-container div {
-    height: 450px;
+    /* height: 450px; */
   }
   .port-container img {
     height: 100%;
@@ -77,14 +77,14 @@ export const PortfolioContainer = styled.div`
   .title-container h1 {
     font-size: 50px;
     line-height: 62px;
-    font-weight: 700;
+    font-weight: 400;
     color: #001d38;
-    padding-bottom: 15px;
-    font-family: muli;
+    padding: 20px;
+    text-transform: capitalize;
+    font-family: "Oswald", sans-serif;
     @media (max-width: 768px) {
       font-size: 30px;
       line-height: 42px;
-      text-transform: capitalize;
     }
   }
   .line_btn {
@@ -99,6 +99,7 @@ export const PortfolioContainer = styled.div`
   .btn-container {
     padding: 35px 0 35px;
     text-align: center;
+    font-family: "Oswald", sans-serif;
   }
 
   .line_btn:hover {
@@ -107,7 +108,7 @@ export const PortfolioContainer = styled.div`
     border: 1px solid #615cfd;
   }
 `;
-const Portfolio = (props) => {
+const Portfolio = () => {
   const [folios, setFolios] = useState([]);
 
   useEffect(() => {
@@ -120,7 +121,7 @@ const Portfolio = (props) => {
     <>
       <PortfolioContainer>
         <div className="title-container">
-          <h1>Some of my awesome stuff</h1>
+          <h1> my awesome stuffs</h1>
         </div>
         <div className="port-container">
           {folios.map((folio) => (

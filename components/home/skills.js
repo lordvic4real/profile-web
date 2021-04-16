@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Styled from "styled-components";
 import styled from "styled-components";
+import { skills } from "../data/services";
 
 const SkillContainer = styled.div`
   height: auto;
@@ -15,11 +16,12 @@ const SkillContainer = styled.div`
   .img-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 2fr);
-    grid-gap: 10px;
-    padding: 12px;
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 30px;
+    @media (max-width: 767px) {
+      grid-template-columns: 1.4fr;
       justify-content: center;
+      padding: 20px;
     }
   }
   .img-wrapper img {
@@ -49,27 +51,18 @@ const SkillContainer = styled.div`
   }
 `;
 
-const Skills = (props) => (
+const Skills = () => (
   <SkillContainer>
     <div className="skills">
       <h1 className="move-me-3">my skills</h1>
       <div className="img-wrapper">
-        <div className="card grow">
-          <img src="/images/react.png" />
-          <h3>React Js</h3>
-        </div>
-        <div className="card grow">
-          <img src="/images/next.png" />
-          <h3>Next Js</h3>
-        </div>
-        <div className="card grow">
-          <img src="/images/js.png" />
-          <h3>Javascript</h3>
-        </div>
-        <div className="card grow">
-          <img src="/images/class.png" />
-          <h3>Teaching</h3>
-        </div>
+        {skills &&
+          skills.map((skill) => (
+            <div className="card grow" key={skill.id}>
+              <img src={skill.image} alt="skill img" />
+              <h3>{skill.title}</h3>
+            </div>
+          ))}
       </div>
     </div>
   </SkillContainer>

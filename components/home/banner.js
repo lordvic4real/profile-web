@@ -10,7 +10,7 @@ const HomeBanner = styled.div`
     grid-template-columns: repeat(2, 1fr);
     min-height: 300px;
 
-    @media (min-width: 200px) and (max-width: 768px) {
+    @media (min-width: 200px) and (max-width: 767px) {
       grid-template-columns: 3fr;
     }
   }
@@ -69,7 +69,7 @@ const HomeBanner = styled.div`
       width: auto;
       object-fit: contain;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: none;
     }
   }

@@ -3,18 +3,20 @@ export const portfolios = [
     image: "/images/capture.PNG",
     id: 1,
     showOnDesktop: true,
-    githubLink: "https://github.com/lordvic4real/wedding-app",
-    netlifyLink: "https://github.com/lordvic4real/wedding-app",
+    githubLink: "https://github.com/lordvic4real",
+    netlifyLink: "https://brytaweddings.netlify.app",
   },
   {
     image: "/images/book.PNG",
     id: 2,
     showOnDesktop: true,
+    githubLink: "https://github.com/lordvic4real",
+    netlifyLink: "https://allbooks.netlify.app",
   },
   {
     image: "/images/port2.png",
     id: 3,
-    showOnDesktop: false,
+    showOnDesktop: true,
   },
   {
     image: "/images/port2.png",

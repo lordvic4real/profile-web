@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import Carousel from "@brainhubeu/react-carousel";
+// import Image from "next/image";
 
 const AboutContainer = styled.div`
   min-height: 450px;
@@ -127,38 +127,9 @@ const AboutContainer = styled.div`
   .grow:hover {
     transform: scale(1.02);
   }
-  /* .move-me {
-    display: inline-block;
-    padding: 20px;
-    color: white;
-    position: relative;
-    margin: 0 0 10px 0;
-  }
-  .move-me-1 {
-    animation: move-in-steps 8s steps(4) infinite;
-  } */
-  /* .move-me-2 {
-    animation: move-in-steps 8s steps(4, start) infinite;
-  }
-  .move-me-3 {
-    animation: move-in-steps 8s infinite;
-  } */
-
-  /* @keyframes move-in-steps {
-    0% {
-      left: 0;
-      color: teal;
-    }
-    100% {
-      left: 100%;
-      color: red;
-      border-radius: 5px;
-      padding: 5px;
-    }
-  } */
 `;
 
-const About = (props) => (
+const About = () => (
   <>
     <AboutContainer>
       <div className="about">
@@ -172,9 +143,9 @@ const About = (props) => (
               contribute to knowledge, building owesome projects and reaching
               out to the the world.
             </p>
-            <a href="#">
+            {/* <a href="#">
               <span className="btn">Download CV</span>
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="img-sec">
