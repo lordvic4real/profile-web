@@ -1,10 +1,12 @@
 import Link from "next/link";
-import Styled from "styled-components";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { skills } from "../data/services";
+import AOS from "aos";
 
 const SkillContainer = styled.div`
   height: auto;
+  padding: 5%;
   .skills h1 {
     font-family: muli;
     font-weight: bold;
@@ -42,6 +44,7 @@ const SkillContainer = styled.div`
     border-radius: 0.25rem;
     height: 220px;
     justify-content: center;
+    box-shadow: 1px 1px 1px 1px rgba(153, 153, 153, 0.53);
   }
   .grow {
     transition: all 0.2s ease-in-out;
@@ -51,20 +54,35 @@ const SkillContainer = styled.div`
   }
 `;
 
-const Skills = () => (
-  <SkillContainer>
-    <div className="skills">
-      <h1 className="move-me-3">my skills</h1>
-      <div className="img-wrapper">
-        {skills &&
-          skills.map((skill) => (
-            <div className="card grow" key={skill.id}>
-              <img src={skill.image} alt="skill img" />
-              <h3>{skill.title}</h3>
-            </div>
-          ))}
-      </div>
-    </div>
-  </SkillContainer>
-);
+function Skills() {
+  useEffect(() => {
+    AOS.init({
+      duration: 5000,
+    });
+  }, []);
+
+  return (
+    <>
+      <SkillContainer>
+        <div className="skills">
+          <h1 className="">my skills</h1>
+          <div className="img-wrapper">
+            {skills &&
+              skills.map((skill) => (
+                <div
+                  className="card grow"
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  key={skill.id}
+                >
+                  <img src={skill.image} alt="skill img" />
+                  <h3>{skill.title}</h3>
+                </div>
+              ))}
+          </div>
+        </div>
+      </SkillContainer>
+    </>
+  );
+}
 export default Skills;

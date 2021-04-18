@@ -2,7 +2,6 @@ import Link from "next/link";
 import styled from "styled-components";
 
 import {
-  FacebookFilled,
   TwitterCircleFilled,
   GithubFilled,
   LinkedinFilled,
@@ -169,7 +168,7 @@ const Footer = () => {
             <h2 className="discuss-title">Let’s discuss for a project</h2>
           </div>
           <div className="discuss-desc">
-            <span className="desc">hire me am open for jobs</span>
+            <span className="desc">Hire me am open for Job</span>
           </div>
           <div>
             <Link href="/contact">

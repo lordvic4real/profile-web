@@ -1,6 +1,8 @@
 import Link from "next/link";
 import styled from "styled-components";
 // import Image from "next/image";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
 const AboutContainer = styled.div`
   min-height: 450px;
@@ -129,30 +131,37 @@ const AboutContainer = styled.div`
   }
 `;
 
-const About = () => (
-  <>
-    <AboutContainer>
-      <div className="about">
-        <div className="title">About</div>
-        <div className="about-desc">
-          <h1 className="">About me</h1>
-          <div>
-            <p className="">
-              Am a programmer per excellence. a graduate of the University of
-              Abuja, Abuja Nigeria, studied Biology Education. i like to
-              contribute to knowledge, building owesome projects and reaching
-              out to the the world.
-            </p>
-            {/* <a href="#">
+function About() {
+  useEffect(() => {
+    AOS.init({
+      duration: 5000,
+    });
+  }, []);
+  return (
+    <>
+      <AboutContainer>
+        <div className="about" data-aos="fade-up" data-aos-duration="3000">
+          <div className="title">About</div>
+          <div className="about-desc">
+            <h1 className="">About me</h1>
+            <div>
+              <p className="">
+                Am a programmer per excellence. a graduate of the University of
+                Abuja, Abuja Nigeria, studied Biology Education. i like to
+                contribute to knowledge, building owesome projects and reaching
+                out to the the world.
+              </p>
+              {/* <a href="#">
               <span className="btn">Download CV</span>
             </a> */}
+            </div>
+          </div>
+          <div className="img-sec">
+            <img src="/images/about.jpg" alt="my-pix" title="victor" />
           </div>
         </div>
-        <div className="img-sec">
-          <img src="/images/about.jpg" />
-        </div>
-      </div>
-    </AboutContainer>
-  </>
-);
+      </AboutContainer>
+    </>
+  );
+}
 export default About;

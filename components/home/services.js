@@ -1,9 +1,11 @@
 import Link from "next/link";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { services } from "../data/services";
+import AOS from "aos";
 
 const ServiceContainer = styled.div`
-  background: #f5f6f7;
+  /* background: #f5f6f7; */
   min-height: 550px;
   font-family: muli;
   .services {
@@ -23,8 +25,10 @@ const ServiceContainer = styled.div`
       font-size: 170%;
     }
     @media (max-width: 767px) {
-      grid-template-columns: 270px;
-      margin: 0px 2% 0px 2%;
+      grid-template-columns: 300px;
+      grid-template-rows: 300px;
+      margin: 0px 0% 0px 0%;
+      padding: 30px 10px 35px 10px;
     }
   }
   .services div {
@@ -38,10 +42,11 @@ const ServiceContainer = styled.div`
     transition: 0.3s;
     @media (min-width: 300px) and (max-width: 768px) {
       height: 300px;
+      /* padding: 2%; */
     }
   }
   .card-title {
-    color: #000faf;
+    color: #000;
     font-weight: bold;
   }
   .card-content {
@@ -54,6 +59,7 @@ const ServiceContainer = styled.div`
     text-align: center;
     transition: 0.5s ease-in;
     padding: 20px;
+    box-shadow: 1px 1px 1px 1px rgba(153, 153, 153, 0.53);
   }
   .card-content img {
     justify-self: center;
@@ -89,30 +95,41 @@ const ServiceContainer = styled.div`
   }
   .desc {
     text-transform: capitalize;
-    color: #000faf;
+    color: #000;
     @media (max-width: 767px) {
       padding: 2px;
     }
   }
 `;
 
-const MyService = () => (
-  <>
-    <ServiceContainer>
-      <p className="title">my services</p>
+export default function MyServices() {
+  useEffect(() => {
+    AOS.init({
+      duration: 5000,
+    });
+  }, []);
+  return (
+    <>
+      <ServiceContainer>
+        <p className="title">my services</p>
 
-      <div className="services">
-        {services &&
-          services.map((service) => (
-            <div className="card-content" key={service.id}>
-              <img src={service.image} alt="services" />
-              <h3 className="card-title">{service.title}</h3>
-              <span className="desc">{service.desc}</span>
-            </div>
-          ))}
-      </div>
-    </ServiceContainer>
-  </>
-);
-
-export default MyService;
+        <div className="services">
+          {services &&
+            services.map((service) => (
+              <div
+                className="card-content"
+                data-aos="fade-up"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                key={service.id}
+              >
+                <img src={service.image} alt="services" />
+                <h3 className="card-title">{service.title}</h3>
+                <span className="desc">{service.desc}</span>
+              </div>
+            ))}
+        </div>
+      </ServiceContainer>
+    </>
+  );
+}

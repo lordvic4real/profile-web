@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { GlobalOutlined, GithubOutlined } from "@ant-design/icons";
 import { portfolios } from "../data/portfolio";
+import AOS from "aos";
 
 export const PortfolioContainer = styled.div`
   /* min-height: 500px; */
@@ -13,8 +14,8 @@ export const PortfolioContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     justify-content: center;
-    padding: 0px 5% 10px 5%;
-    grid-gap: 30px;
+    padding: 0px 6% 10px 6%;
+    grid-gap: 20px;
     @media (max-width: 678px) {
       grid-template-columns: 2fr;
     }
@@ -30,7 +31,7 @@ export const PortfolioContainer = styled.div`
   .view {
     position: relative;
     overflow: hidden;
-    cursor: default;
+    /* cursor: default; */
   }
   .mask {
     position: absolute;
@@ -117,13 +118,22 @@ const Portfolio = () => {
     );
     setFolios(effectPortfolios);
   }, [portfolios]);
+  useEffect(() => {
+    AOS.init({
+      duration: 5000,
+    });
+  }, []);
   return (
     <>
       <PortfolioContainer>
         <div className="title-container">
           <h1> my awesome stuffs</h1>
         </div>
-        <div className="port-container">
+        <div
+          className="port-container"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           {folios.map((folio) => (
             <div className="view overlay " key={folio.id}>
               <img src={folio.image} />

@@ -137,6 +137,7 @@ const MobileSubMenu = styled.div`
   right: 0;
   z-index: 999;
   border-radius: 0px 0px 0px 25px;
+
   @media (max-width: 768px) {
     width: 300px;
     height: 250px;
@@ -151,6 +152,7 @@ const MobileSubMenu = styled.div`
     padding-left: 25px;
     color: #fff;
     transition: all 0.4s ease-in;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.05);
     @media (max-width: 768px) {
       height: 50px;
       padding-left: 16px;

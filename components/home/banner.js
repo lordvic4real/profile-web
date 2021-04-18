@@ -1,5 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
 const HomeBanner = styled.div`
   min-height: 400px;
@@ -122,30 +124,39 @@ const HomeBanner = styled.div`
   }
 `;
 
-const Banner = (props) => (
-  <>
-    <HomeBanner>
-      <div className="banner-container">
-        <div className="section-intro">
-          <h1>
-            i am
-            <br />
-            <span className="sm">victor ugbede david</span>
-          </h1>
-          <span className="intro">front-end engineer, and instructor</span>
-          <div>
-            <Link href="/contact">
-              <a>
-                <span className="btn">lets connect</span>
-              </a>
-            </Link>
+function Banner() {
+  useEffect(() => {
+    AOS.init({
+      duration: 5000,
+    });
+  }, []);
+  return (
+    <>
+      <HomeBanner>
+        <div className="banner-container">
+          <div className="section-intro">
+            <h1>
+              i am
+              <br />
+              <span className="sm" data-aos="fade-up" data-aos-duration="2000">
+                victor ugbede david
+              </span>
+            </h1>
+            <span className="intro">front-end engineer, and instructor</span>
+            <div>
+              <Link href="/contact">
+                <a>
+                  <span className="btn">lets connect</span>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="section-img">
+            <div className="profile-img"></div>
           </div>
         </div>
-        <div className="section-img">
-          <div className="profile-img"></div>
-        </div>
-      </div>
-    </HomeBanner>
-  </>
-);
+      </HomeBanner>
+    </>
+  );
+}
 export default Banner;
