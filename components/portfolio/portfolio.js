@@ -48,14 +48,34 @@ const AllPortfolios = () => {
                     <img src={folio.image} />
                     <div className="mask ">
                       <span className="title">
-                        <GithubOutlined
-                          style={{ fontSize: 50, fontWeight: 800 }}
-                        />
+                        {folio.githubLink && (
+                          <a
+                            href={folio.githubLink}
+                            rel="noreferrer noopener"
+                            target="_blank"
+                          >
+                            <span className="title">
+                              <GithubOutlined
+                                style={{ fontSize: 50, fontWeight: 800 }}
+                              />
+                            </span>
+                          </a>
+                        )}
                       </span>
                       <span className="title">
-                        <GlobalOutlined
-                          style={{ fontSize: 50, fontWeight: 800 }}
-                        />
+                        {folio.netlifyLink && (
+                          <a
+                            href={folio.netlifyLink}
+                            rel="noreferrer noopener"
+                            target="_blank"
+                          >
+                            <span className="title">
+                              <GlobalOutlined
+                                style={{ fontSize: 50, fontWeight: 800 }}
+                              />
+                            </span>
+                          </a>
+                        )}
                       </span>
                     </div>
                   </div>
