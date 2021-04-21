@@ -48,8 +48,10 @@ const ServiceContainer = styled.div`
   .card-title {
     color: #000;
     font-weight: bold;
+    font-family: "Oswald", sans-serif;
   }
   .card-content {
+    font-family: "Oswald", sans-serif;
     display: grid;
     align-content: center;
     justify-content: center;
@@ -73,12 +75,12 @@ const ServiceContainer = styled.div`
     font-size: min(1.45rem, 16.4px);
     /* text-align: justify; */
     font-weight: 600;
-    font-family: "Pacifico", cursive;
+    font-family: muli;
     text-align: center;
   }
   .title {
     font-size: 50px;
-    font-family: "Pacifico", cursive;
+    font-family: "Oswald", sans-serif;
     text-align: center;
     margin-bottom: 10px;
     padding: 10px 20px;
@@ -96,6 +98,7 @@ const ServiceContainer = styled.div`
   .desc {
     text-transform: capitalize;
     color: #000;
+    font-family: "Oswald", sans-serif;
     @media (max-width: 767px) {
       padding: 2px;
     }

@@ -5,13 +5,7 @@ import Meta from "../components/shared/MetaSEO";
 export default function Contact() {
   return (
     <>
-      <Meta
-        title={`${process.env.NEXT_PUBLIC_APP_NAME} - contact `}
-        desc="my profile"
-        canonical="/"
-        type=""
-        image=""
-      />
+      <Meta title="Contact" desc="my profile" canonical="/" type="" image="" />
       <Banner />
     </>
   );

@@ -6,13 +6,7 @@ import Meta from "../components/shared/MetaSEO";
 export default function About() {
   return (
     <>
-      <Meta
-        title={`${process.env.NEXT_PUBLIC_APP_NAME} - about `}
-        desc="my profile"
-        canonical="/"
-        type=""
-        image=""
-      />
+      <Meta title="About " desc="my profile" canonical="/" type="" image="" />
       <Banner />
     </>
   );

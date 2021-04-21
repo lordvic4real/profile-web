@@ -146,10 +146,10 @@ function About() {
             <h1 className="">About me</h1>
             <div>
               <p className="">
-                Am a programmer per excellence. a graduate of the University of
-                Abuja, Abuja Nigeria, studied Biology Education. i like to
-                contribute to knowledge, building owesome projects and reaching
-                out to the the world.
+                I'm a programmer per excellence, a graduate of the University of
+                Abuja, Abuja Nigeria. Studied Biology Education. I like to
+                contribute to knowledge, build awesome projects and reach out to
+                the world.
               </p>
               {/* <a href="#">
               <span className="btn">Download CV</span>

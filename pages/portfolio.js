@@ -7,7 +7,7 @@ export default function Portfolio() {
   return (
     <>
       <Meta
-        title={`${process.env.NEXT_PUBLIC_APP_NAME} - portfolio `}
+        title="Portfolio "
         desc="my profile"
         canonical="/"
         type=""

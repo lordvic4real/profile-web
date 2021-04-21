@@ -195,7 +195,7 @@ const Header = ({ menuOpen, toggleMenu }) => {
           <header className="header-bg ">
             <div className="logo  ">
               <Link href="/">
-                <a>LORDVIC</a>
+                <a>Lordvic</a>
               </Link>
             </div>
             <div className="navigation-main">

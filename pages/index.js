@@ -11,7 +11,8 @@ export default function Home() {
   return (
     <>
       <Meta
-        title={`${process.env.NEXT_PUBLIC_APP_NAME} - home `}
+        // title={`${process.env.NEXT_PUBLIC_APP_NAME} - Home `}
+        title="Home "
         desc="my profile"
         canonical="/"
         type=""
