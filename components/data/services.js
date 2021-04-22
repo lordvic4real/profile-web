@@ -2,22 +2,22 @@ export const services = [
   {
     image: "/images/1.svg",
     title: "Mobile App Dev",
-    desc: ` You Can Trust Us For Your Mobile App Project
-               We Build With Cutting Edge Technology . `,
+    desc: ` You Can Trust me For Your Mobile App Projects
+               i Build With Cutting Edge Technologies . `,
     id: 1,
   },
   {
     image: "/images/2.svg",
     title: "Web Development",
-    desc: ` Let Me Be Your Client For All Your Web Applications
-        Projects We Will Give You The Best . `,
+    desc: ` Let Me Be Your Client For All Your Web Application
+        Projects, I Will Give You The Best . `,
     id: 3,
   },
   {
     image: "/images/3.svg",
     title: "Training",
-    desc: ` We Deliver Cooperate And Personal Trainings From
-        Basic Computer Knowledge,Graphics-Design And Web/Software Development. `,
+    desc: ` I Deliver Cooperate And Personal Training, Ranging From
+         MicroSoft Office Suites To Web/Software Development. with over 3years experience `,
     id: 3,
   },
 ];

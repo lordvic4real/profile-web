@@ -127,7 +127,7 @@ const Portfolio = () => {
     <>
       <PortfolioContainer>
         <div className="title-container">
-          <h1> my awesome stuff</h1>
+          <h1> my recent works</h1>
         </div>
         <div
           className="port-container"

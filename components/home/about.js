@@ -14,6 +14,7 @@ const AboutContainer = styled.div`
     margin: 0px 5% 0px 5%;
     @media (min-width: 200px) and (max-width: 768px) {
       grid-template-columns: 2fr;
+      margin: 0px 5% 0px 3%;
     }
   }
   .btn {
@@ -149,7 +150,10 @@ function About() {
                 I'm a programmer per excellence, a graduate of the University of
                 Abuja, Abuja Nigeria. Studied Biology Education. I like to
                 contribute to knowledge, build awesome projects and reach out to
-                the world.
+                the world. am Self-motivated Web Development professional with
+                3+ years of experience looking for Web Development Job with your
+                Company utilizing unmatched web programming skills and
+                abilities.
               </p>
               {/* <a href="#">
               <span className="btn">Download CV</span>

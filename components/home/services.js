@@ -114,7 +114,7 @@ export default function MyServices() {
   return (
     <>
       <ServiceContainer>
-        <p className="title">my services</p>
+        <p className="title">what i do</p>
 
         <div className="services">
           {services &&

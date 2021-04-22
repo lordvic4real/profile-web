@@ -24,6 +24,11 @@ const PortfolioStyle = styled(PortfolioContainer)`
   .view img {
     object-fit: cover;
   }
+  .tab-title {
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+  }
 `;
 const AllPortfolios = () => {
   useEffect(() => {
@@ -84,10 +89,57 @@ const AllPortfolios = () => {
             </PortfolioStyle>
           </TabPane>
           <TabPane tab="Client Projects" key="2">
-            Content of Tab Pane 2
+            <PortfolioStyle>
+              <h2 className="tab-title">In progress</h2>
+            </PortfolioStyle>
           </TabPane>
           <TabPane tab="Side projects" key="3">
-            Content of Tab Pane 3
+            <PortfolioStyle>
+              <div className="port-container ">
+                {portfolios.map((folio) => (
+                  <div
+                    className="view overlay "
+                    data-aos="fade-left"
+                    data-aos-duration="3000"
+                    key={folio.id}
+                  >
+                    <img src={folio.image} />
+                    <div className="mask ">
+                      <span className="title">
+                        {folio.githubLink && (
+                          <a
+                            href={folio.githubLink}
+                            rel="noreferrer noopener"
+                            target="_blank"
+                          >
+                            <span className="title">
+                              <GithubOutlined
+                                style={{ fontSize: 50, fontWeight: 800 }}
+                              />
+                            </span>
+                          </a>
+                        )}
+                      </span>
+                      <span className="title">
+                        {folio.netlifyLink && (
+                          <a
+                            href={folio.netlifyLink}
+                            rel="noreferrer noopener"
+                            target="_blank"
+                          >
+                            <span className="title">
+                              <GlobalOutlined
+                                style={{ fontSize: 50, fontWeight: 800 }}
+                              />
+                            </span>
+                          </a>
+                        )}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </PortfolioStyle>
           </TabPane>
         </Tabs>
       </PortfolioContainer>

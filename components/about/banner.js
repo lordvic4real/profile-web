@@ -27,14 +27,40 @@ const BannerWrapper = styled.div`
     font-family: muli;
   }
   .intro {
-    padding: 30px;
-    font-size: 25px;
-    color: #000;
-    font-weight: 700;
+    /* padding: 5%; */
+
     margin-bottom: 0;
     font-family: muli;
-    text-align: center;
+    text-align: justify;
     line-height: 38px;
+  }
+  @media (max-width: 768px) {
+    .about {
+      padding-top: 10%;
+    }
+    .intro {
+      font-size: 135%;
+      text-align: justify;
+      padding: 5px;
+      font-weight: 600;
+    }
+    .about p {
+      font-size: 130%;
+      padding: 0;
+    }
+  }
+  label {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: muli;
+    color: #000;
+    /* padding-top: 40px; */
+  }
+  .video {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    padding: 40px 6% 0 5%;
   }
 `;
 
@@ -44,15 +70,36 @@ const Banner = () => (
       <div className="banner_area">
         <h1>about me</h1>
       </div>
-      <div className="video">
-        <p className="intro">
-          I am Victor David. a skillful Web Developer, a Teacher,
-          <br /> Jesus boy, a family and goal oriented, i will like to
-          <br /> share with you some of my ideas.
-        </p>
-      </div>
-      <div>
+
+      <div className="about">
         <About />
+      </div>
+      <div className="video">
+        <div className="">
+          <label>Career Objective:</label>
+          <p className="intro">
+            To gain confidence and fame using my potential in the field of “Web
+            Development”, and express my innovative creative skills for self and
+            company growth.
+          </p>
+        </div>
+        <div>
+          <label>Career Summary:</label>
+          <p className="intro">
+            - Sound knowledge of React Js,Next Js HTML5, CSS3 and JavaScript.{" "}
+            <br />
+            - Ability to develop and design webpages and websites to make them
+            functional. <br /> - Knowledge of the international web standards
+            and protocols <br /> - Ability to develop multi-user applications
+            within SOA. <br /> - Multi-tasking ability with the experience of
+            handling multiple projects at a time. <br /> - Team player with
+            experience of training the new joiners. <br /> - Ability to guide
+            and design training programmes on web development. <br /> -
+            Excellent communication and inter-personal skills. <br /> - Ability
+            to grasp the ideas of the clients and implement in the same
+            direction.
+          </p>
+        </div>
       </div>
     </BannerWrapper>
   </>

@@ -94,6 +94,9 @@ const Container = styled.div`
     line-height: 40px !important;
     border: 1px solid #334a60;
     font-size: 15px;
+    @media (max-width: 768px) {
+      font-size: 120%;
+    }
   }
   .socail_links:hover {
     color: #fff !important;
@@ -168,7 +171,7 @@ const Footer = () => {
             <h2 className="discuss-title">Let’s discuss for a project</h2>
           </div>
           <div className="discuss-desc">
-            <span className="desc">Hire me am open for Job</span>
+            <span className="desc">Hire me, am open for a Job</span>
           </div>
           <div>
             <Link href="/contact">
@@ -183,6 +186,9 @@ const Footer = () => {
           <nav>
             <Link href="/" passHref>
               <a className="footer-link">Home</a>
+            </Link>
+            <Link href="/about" passHref>
+              <a className="footer-link">About</a>
             </Link>
             <Link href="/portfolio" passHref>
               <a className="footer-link">Portfolio</a>
