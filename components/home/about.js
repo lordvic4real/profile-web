@@ -156,7 +156,7 @@ function About() {
                 abilities.
               </p>
 
-              <a href="www.brytahub.com" rel="noopener" target="_blank">
+              <a href="http://www.brytahub.com" rel="noopener" target="_blank">
                 <span className="btn">
                   <small>Trained by Brytahub</small>
                 </span>
