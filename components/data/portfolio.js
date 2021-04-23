@@ -23,8 +23,8 @@ export const portfolios = [
 
   {
     image: "/images/movies.PNG",
-    id: 5,
-    showOnDesktop: false,
+    id: 4,
+    showOnDesktop: true,
     githubLink: "https://github.com/lordvic4real/movie-search",
     netlifyLink: "https://allmovies.netlify.app",
   },

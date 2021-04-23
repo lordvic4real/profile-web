@@ -11,7 +11,7 @@ export const services = [
     title: "Web Development",
     desc: ` Let Me Be Your Client For All Your Web Application
         Projects, I Will Give You The Best . `,
-    id: 3,
+    id: 2,
   },
   {
     image: "/images/3.svg",
@@ -41,6 +41,6 @@ export const skills = [
   {
     id: 4,
     image: "/images/class.png",
-    title: "Training",
+    title: "Mentoring",
   },
 ];
