@@ -14,9 +14,9 @@ export const portfolios = [
     netlifyLink: "https://allbooks.netlify.app",
   },
   {
-    image: "/images/author.png",
+    image: "/images/author.PNG",
     id: 3,
-    showOnDesktop: true,
+    showOnDesktop: false,
     githubLink: "https://github.com/lordvic4real/React-AuthorQuiz-Game",
     netlifyLink: "https://authorquiz.netlify.app",
   },
