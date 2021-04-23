@@ -143,6 +143,7 @@ function Banner() {
               </span>
             </h1>
             <span className="intro">front-end engineer, and instructor</span>
+
             <div>
               <Link href="/contact">
                 <a>

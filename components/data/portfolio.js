@@ -20,13 +20,7 @@ export const portfolios = [
     githubLink: "https://github.com/lordvic4real/React-AuthorQuiz-Game",
     netlifyLink: "https://authorquiz.netlify.app",
   },
-  {
-    image: "/images/capture.PNG",
-    id: 4,
-    showOnDesktop: false,
-    // githubLink: "https://github.com/lordvic4real/React-AuthorQuiz-Game",
-    // netlifyLink: "https://https://authorquiz.netlify.app",
-  },
+
   {
     image: "/images/movies.PNG",
     id: 5,
@@ -34,11 +28,6 @@ export const portfolios = [
     githubLink: "https://github.com/lordvic4real/movie-search",
     netlifyLink: "https://allmovies.netlify.app",
   },
-  // {
-  //   image: "/images/tutor.jpeg",
-  //   id: 6,
-  //   showOnDesktop: false,
-  // },
 ];
 
 // 5dcf7f28a88be0edc01bbbde06f024ab

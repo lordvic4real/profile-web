@@ -41,6 +41,6 @@ export const skills = [
   {
     id: 4,
     image: "/images/class.png",
-    title: "Teaching",
+    title: "Training",
   },
 ];

@@ -35,9 +35,9 @@ const AboutContainer = styled.div`
     cursor: pointer;
     @media (max-width: 767px) {
       height: 51px;
-      width: 168.5px;
+      /* width: 168.5px; */
       padding: 10px 30px;
-      font-size: 100%;
+      font-size: 120%;
       margin-bottom: 30px;
     }
   }
@@ -155,9 +155,12 @@ function About() {
                 Company utilizing unmatched web programming skills and
                 abilities.
               </p>
-              {/* <a href="#">
-              <span className="btn">Download CV</span>
-            </a> */}
+
+              <a href="www.brytahub.com" rel="noopener" target="_blank">
+                <span className="btn">
+                  <small>Trained by Brytahub</small>
+                </span>
+              </a>
             </div>
           </div>
           <div className="img-sec">

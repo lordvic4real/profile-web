@@ -1,7 +1,8 @@
 import Link from "next/link";
 import styled from "styled-components";
 import About from "../../components/home/about";
-
+import AOS from "aos";
+import { useEffect } from "react";
 const BannerWrapper = styled.div`
   font-family: muli;
   padding-bottom: 30px;
@@ -64,45 +65,52 @@ const BannerWrapper = styled.div`
   }
 `;
 
-const Banner = () => (
-  <>
-    <BannerWrapper>
-      <div className="banner_area">
-        <h1>about me</h1>
-      </div>
+const Banner = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 5000,
+    });
+  }, []);
+  return (
+    <>
+      <BannerWrapper>
+        <div className="banner_area">
+          <h1>about me</h1>
+        </div>
 
-      <div className="about">
-        <About />
-      </div>
-      <div className="video">
-        <div className="">
-          <label>Career Objective:</label>
-          <p className="intro">
-            To gain confidence and fame using my potential in the field of “Web
-            Development”, and express my innovative creative skills for self and
-            company growth.
-          </p>
+        <div className="about">
+          <About />
         </div>
-        <div>
-          <label>Career Summary:</label>
-          <p className="intro">
-            - Sound knowledge of React Js,Next Js HTML5, CSS3 and JavaScript.{" "}
-            <br />
-            - Ability to develop and design webpages and websites to make them
-            functional. <br /> - Knowledge of the international web standards
-            and protocols <br /> - Ability to develop multi-user applications
-            within SOA. <br /> - Multi-tasking ability with the experience of
-            handling multiple projects at a time. <br /> - Team player with
-            experience of training the new joiners. <br /> - Ability to guide
-            and design training programmes on web development. <br /> -
-            Excellent communication and inter-personal skills. <br /> - Ability
-            to grasp the ideas of the clients and implement in the same
-            direction.
-          </p>
+        <div className="video" data-aos="fade-left" data-aos-duration="3000">
+          <div className="">
+            <label>Career Objective:</label>
+            <p className="intro">
+              To gain confidence and fame using my potential in the field of
+              “Web Development”, and express my innovative creative skills for
+              self and company growth.
+            </p>
+          </div>
+          <div>
+            <label>Career Summary:</label>
+            <p className="intro">
+              - Sound knowledge of React Js,Next Js HTML5, CSS3 and JavaScript.{" "}
+              <br />
+              - Ability to develop and design webpages and websites to make them
+              functional. <br /> - Knowledge of the international web standards
+              and protocols <br /> - Ability to develop multi-user applications
+              within SOA. <br /> - Multi-tasking ability with the experience of
+              handling multiple projects at a time. <br /> - Team player with
+              experience of training the new joiners. <br /> - Ability to guide
+              and design training programmes on web development. <br /> -
+              Excellent communication and inter-personal skills. <br /> -
+              Ability to grasp the ideas of the clients and implement in the
+              same direction.
+            </p>
+          </div>
         </div>
-      </div>
-    </BannerWrapper>
-  </>
-);
+      </BannerWrapper>
+    </>
+  );
+};
 
 export default Banner;
