@@ -11,22 +11,23 @@ import {
 
 const StyledHeader = styled.header`
   width: 100%;
-  height: auto;
+  height: 80px;
   position: relative;
 
   .navbar {
     top: 0;
     right: 0;
     left: 0;
-    background: #000000;
+    background: #010010;
     position: fixed;
     box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
     transition: all 0.5s;
-    /* display: flex; */
+    height: 80px;
     z-index: 999;
   }
   .bg {
     /* background: rgb(8, 4, 8); */
+    height: 80px;
     background: #6b40dc;
   }
   .navbar a {
