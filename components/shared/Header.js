@@ -31,15 +31,20 @@ const StyledHeader = styled.header`
     background: #6b40dc;
   }
   .navbar a {
-    color: #fff;
+    color: #fafafa;
     font-size: 17px;
     font-family: muli;
+    transition: 0.4s ease-in;
   }
   .navbar .icon-bg {
     /* background: black; */
   }
   .navbar .logo a {
     color: #fff;
+    transition: 0.2s ease-in-out;
+  }
+  .navbar .icon-bg {
+    border: 0.3px solid #fafafa;
   }
 
   .navigations {
