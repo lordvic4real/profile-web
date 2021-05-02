@@ -23,6 +23,9 @@ const BannerWrapper = styled.div`
     margin-bottom: 0;
     text-transform: capitalize;
     font-family: muli;
+    @media (max-width: 768px) {
+      font-size: 150%;
+    }
   }
 `;
 

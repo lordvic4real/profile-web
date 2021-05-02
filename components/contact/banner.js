@@ -31,13 +31,18 @@ const BannerWrapper = styled.div`
     margin-bottom: 0;
     text-transform: capitalize;
     font-family: muli;
+    @media (max-width: 768px) {
+      font-size: 150%;
+    }
   }
   .adres {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 30px 40px 30px 75px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 30px 30px 30px 55px;
 
     @media (max-width: 788px) {
       padding: 20px 10px 20px 6%;
@@ -59,6 +64,10 @@ const BannerWrapper = styled.div`
     font-family: muli;
     padding: 30px 40px 30px 95px;
     text-align: center;
+    @media (max-width: 768px) {
+      font-size: 150%;
+      padding: 30px;
+    }
   }
 
   .contact,
@@ -101,17 +110,16 @@ const Banner = () => (
                 rel="noreferrer noopener"
                 target="_blank"
               >
-                <TwitterOutlined />
+                <TwitterOutlined style={{ color: "skyblue" }} />
+                <span> www.twitter.com/lordvic001</span>
               </a>
             </span>
           </div>
           <div className="wrapper">
             <span className="icon-wrap">
-              <MailOutlined />
-            </span>
-            <span>
-              <a href="mailto:victorugbededavid@gmail.com" target="_blank">
-                victorugbededavid@gmail.com
+              <a href="mailto:hello@lordvic.com" target="_blank">
+                <MailOutlined style={{ paddingRight: 4 }} />
+                <span>hello@lordvic.com</span>
               </a>
             </span>
           </div>
@@ -122,7 +130,8 @@ const Banner = () => (
                 rel="noreferrer noopener"
                 target="_blank"
               >
-                <LinkedinOutlined />
+                <LinkedinOutlined style={{ color: "skyblue" }} />
+                <span>www.linkedin.com/in/victor-david</span>
               </a>
             </span>
           </div>
@@ -134,6 +143,7 @@ const Banner = () => (
                 target="_blank"
               >
                 <GithubOutlined />
+                <span> github.com/lordvic4real</span>
               </a>
             </span>
           </div>
